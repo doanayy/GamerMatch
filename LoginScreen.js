@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, Text } from 'react-native';
+import { View, TextInput, Button, Text, Alert } from 'react-native';
+import { auth } from './firebaseConfig';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // giriş işlemi yapılacak
-    console.log('Giriş yapıldı:', email);
+  const handleLogin = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      Alert.alert('Başarılı giriş!');
+      // Buraya yönlendirme vs. eklenebilir
+    } catch (error) {
+      Alert.alert('Giriş hatası:', error.message);
+    }
   };
 
   return (
