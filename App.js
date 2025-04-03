@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { registerRootComponent } from 'expo'; // ← BUNU EKLE
+
 import LoginScreen from './LoginScreen';
 import SignUpScreen from './SignUpScreen';
 
 const Stack = createStackNavigator();
 
-export default function App() {
+function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
@@ -16,3 +18,5 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+registerRootComponent(App); // ← BUNU DA EKLE
