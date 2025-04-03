@@ -16,7 +16,9 @@ export default function OnboardingScreen() {
         await updateDoc(userRef, {
           isOnboarded: true,
         });
-        navigation.replace('Match'); // Artık onboarding bitti, kaydırma ekranına geçiyoruz
+
+        // Onboarding bitti → MatchScreen'e yönlendir
+        navigation.replace('Match');
       } catch (error) {
         console.error('Onboarding update error:', error);
       }
@@ -26,8 +28,9 @@ export default function OnboardingScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to GamerMatch!</Text>
-      <Text style={styles.text}>Let's set up your gaming preferences 🕹️</Text>
-      {/* Buraya onboarding adımları, avatar seçimi vs. eklenebilir */}
+      <Text style={styles.text}>Let's set up your gaming preferences 🎮</Text>
+
+      {/* Buraya ilerde onboarding formu vs. eklersin */}
       <Button title="Finish Onboarding" onPress={handleFinishOnboarding} />
     </View>
   );
