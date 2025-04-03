@@ -4,12 +4,12 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAUBjVgjh5z9Ci3YdWfKB8BrMaFL91-G10s",
-  authDomain: "gamermatch-59301.firebaseapp.com",
-  projectId: "gamermatch-59301",
-  storageBucket: "gamermatch-59301.appspot.com",
-  messagingSenderId: "1478380673615",
-  appId: "1:1478380673615:web:6938afe409a3ea8da727ba",
+  apiKey: "AIzaSyAUBjVgjh5z9Ci3YdWfKB8BrMaFL91-G10s"
+  authDomain: "gamermatch-59301.firebaseapp.com"
+  projectId: "gamermatch-59301"
+  storageBucket: "gamermatch-59301.appspot.com"
+  messagingSenderId: "1478380673615"
+  appId: "1:1478380673615:web:6938afe409a3ea8da727ba"
   measurementId: "G-9EBQHF6Q5F"
 };
 
