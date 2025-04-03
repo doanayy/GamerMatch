@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAUBVJghJc52Gj3VdKf8R8rMaFLg1-G1Os",
+  apiKey: "AIzaSyAUBjVgjh5z9Ci3YdWfKB8rMaFL91-G1Os",
   authDomain: "gamermatch-59301.firebaseapp.com",
   projectId: "gamermatch-59301",
   storageBucket: "gamermatch-59301.appspot.com",
