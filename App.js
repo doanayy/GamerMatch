@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { registerRootComponent } from 'expo';
 import { auth, db } from './firebaseConfig';
 import { doc, getDoc } from 'firebase/firestore';
@@ -11,7 +11,7 @@ import SignUpScreen from './SignUpScreen';
 import MatchScreen from './MatchScreen';
 import OnboardingScreen from './OnboardingScreen';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 function App() {
   const [user, setUser] = useState(null);
@@ -44,7 +44,7 @@ function App() {
         ) : (
           <>
             <Stack.Screen name="Login" component={LoginScreen} />
-            <Stack.Screen name="Signup" component={SignUpScreen} />
+            <Stack.Screen name="SignUp" component={SignUpScreen} />
           </>
         )}
       </Stack.Navigator>
